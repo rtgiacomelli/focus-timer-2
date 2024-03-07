@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Focus Timer 2.0</title>
+
+  <link rel="stylesheet" href="./style.css">
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  <script type="module" src="./src/main.js" defer></script>
+</head>
+<body>
+  <div id="app" class="flex">
+    <div id="left">
+      <section id="timer" class="flex">
+        <span id="minutes">00</span>
+        <span>:</span>
+        <span id="seconds">00</span>
+      </section>
+
+      <section id="controls" class="flex">
+        <button data-action="toggleRunning" class="ph ph-play-circle controls">
+          <span class="sr-only">Iniciar contador</span>
+        </button>
+        <button data-action="reset" class="ph ph-stop-circle controls">
+          <span class="sr-only">Parar contador</span>
+        </button>
+        <button class="ph ph-plus-circle controls" id="addFive">
+          <span class="sr-only">Adicionar 5 minutos</span>
+        </button>
+        <button class="ph ph-minus-circle controls" id="removeFive">
+          <span class="sr-only">Diminuir 5 minutos</span>
+        </button>
+     </section>
+    </div>
+
+    <div id="right">
+      <section id="ambient">
+        <button data-action="musicTree" class="ph ph-tree ambient-buttons">
+          <span class="sr-only">Iniciar som ambiente de floresta</span>
+        </button>
+        <button data-action="musicRain" class="ph ph-cloud-rain ambient-buttons">
+          <span class="sr-only">Iniciar som ambiente de chuva</span>
+        </button>
+        <button data-action="musicCoffee" class="ph ph-coffee ambient-buttons">
+          <span class="sr-only">Iniciar som ambiente de cafeteria</span>
+        </button>
+        <button data-action="musicCampfire" class="ph ph-campfire ambient-buttons">
+          <span class="sr-only">Iniciar som ambiente de lareira</span>
+        </button>
+      </section>
+    </div>
+  </div>
+</body>
+</html>
